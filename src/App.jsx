@@ -12,7 +12,9 @@ function App() {
   return (
     <>
       <div className='grid grid-cols-4 gap-10'>
-        <Card title="Tokyo" description="descrizione" imgUrl={imgUrl}></Card>
+        <Card title="Tokyo" description="descrizione" imgUrl={imgUrl}>
+          CHILDREN PROP
+        </Card>
         <Card title="Tokyo" description="descrizione" imgUrl={imgUrl}></Card>
         <Card title="Tokyo" description="descrizione" imgUrl={imgUrl}></Card>
         <Card title="Tokyo" description="descrizione" imgUrl={imgUrl}></Card>
