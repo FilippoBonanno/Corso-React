@@ -47,18 +47,23 @@ function App() {
   return (
     <>
       <div className='grid grid-cols-4 gap-10'>
-        {/* METODO .MAP PER ITERARE SU UN ARRAY */}
-        {cards.map((city) => (
-          <Card
-            key={city.id}
-            title={city.title}
-            isVisited={city.isVisited}
-            imgUrl={city.imgUrl}
-            description={city.description}
-          >
-            {city.children}
-          </Card>
-        ))}
+        {cards
+
+          // METODO PER FILTRARE IN BASE AD UN CONTENUTO
+          .filter((city) => city.isVisited)
+
+          /* METODO .MAP PER ITERARE SU UN ARRAY */
+          .map((city) => (
+            <Card
+              key={city.id}
+              title={city.title}
+              isVisited={city.isVisited}
+              imgUrl={city.imgUrl}
+              description={city.description}
+            >
+              {city.children}
+            </Card>
+          ))}
 
       </div >
 
